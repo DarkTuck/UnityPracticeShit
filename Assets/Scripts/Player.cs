@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(moveInput.x * speed, moveInput.y * speed).normalized;
+        rb.velocity = new Vector2(moveInput.x , moveInput.y).normalized*speed;
     }
     private void Update()
     {
