@@ -1012,7 +1012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9719e508856b34888a88b9d9d9e7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  MaxHP: 100
+  MinHP: 0
 --- !u!114 &1565309330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,9 +1059,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
-  m_Value: 100
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1080,10 +1081,10 @@ RectTransform:
   m_Father: {fileID: 1974842045}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.800354, y: 125.900055}
-  m_SizeDelta: {x: 309.12, y: 21.192}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 11.800354, y: -10.099945}
+  m_SizeDelta: {x: -176.88, y: 21.192001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1706754232
 GameObject:

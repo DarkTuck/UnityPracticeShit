@@ -2,29 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NaughtyAttributes;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] int HP;
+    [SerializeField] float MaxHP, MinHP;
+    [ShowNonSerializedField]float HP;
     Slider healthBar;
     // Start is called before the first frame update
     void Start()
     {
+        HP = MaxHP;
         healthBar = GetComponent<Slider>();
-        SetMaxHealth(HP);
     }
-    public void SetMaxHealth(int maxHealth)
-    {
-        healthBar.maxValue = maxHealth;
-        healthBar.value = maxHealth;
-    }
-    private void SetHealth(int health)
+    private void SetHealth(float health)
     {
         healthBar.value = health;
     }
     public void SetHP(int health)
     {
-        HP += health;
-        SetHealth(HP);
+        HP=Mathf.Clamp(HP += health,MinHP,MaxHP);
+        SetHealth(HP / 100);
     }
 }
