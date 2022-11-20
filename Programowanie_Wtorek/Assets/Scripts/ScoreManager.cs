@@ -79,13 +79,9 @@ public class ScoreManager : MonoBehaviour
     }
     void Game(InputAction.CallbackContext context)
     {
-            if (context.performed)
-            {
-                score += 1;  
-            }
-            lastScore = score;
-            scoreText.text = score.ToString();
-        
+        score += 1;
+        lastScore = score;
+        scoreText.text = score.ToString();
         lastScoreText.text = lastScore.ToString();
     }
 }
