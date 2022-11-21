@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class ScoreManager : MonoBehaviour
 {
     [Foldout("UI")][Required][SerializeField]
-    GameObject playScene, menuScene,quitButton;
+    GameObject playScene, menuScene,quitButton,pauseMenu;
     [Foldout("Timer Setings")][Required][SerializeField]
     TextMeshProUGUI timerText;
     [Foldout("Timer Setings")][SerializeField]
@@ -53,22 +53,23 @@ public class ScoreManager : MonoBehaviour
                 timerRunnig = false;
                 quitButton.SetActive(true);
                 time = timeAtStart;
-                actions.Player.Jump.performed -= Game;
+                actions.Player.Jump.performed -= AddPoints;
             }
             SetTimerText();
         }
     }
     void SetTimerText()
     {
-        timerText.text = time.ToString("0.00");
+        timerText.text = $@"Last Score:{time.ToString("0.00")}";
     }
     public void StartGame()
     {
-        actions.Player.Jump.performed += Game;
+        actions.Player.Jump.performed += AddPoints;
         menuScene.SetActive(false);
         playScene.SetActive(true);
         timerRunnig = true;
         time = timeAtStart;
+        timerText.color = Color.white;
         score = 0;
     }
     public void QuitGame()
@@ -76,8 +77,9 @@ public class ScoreManager : MonoBehaviour
         menuScene.SetActive(true);
         playScene.SetActive(false);
         quitButton.SetActive(false);
+        pauseMenu.SetActive(false);
     }
-    void Game(InputAction.CallbackContext context)
+    void AddPoints(InputAction.CallbackContext context)
     {
         score += 1;
         lastScore = score;
