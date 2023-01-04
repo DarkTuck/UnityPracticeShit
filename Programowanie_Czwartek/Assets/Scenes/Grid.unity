@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ded627b6ed1095844bf1fd88bbe91a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 1261684277377441294, guid: 6f0eda90f7d275a4c9ecce260b1ab683, type: 3}
+  blockSprite: {fileID: 7482667652216324306, guid: 341cedaf7ab4b8346851d9de236361e6, type: 3}
   size: 0
   gridX: 14
   gridY: 8
