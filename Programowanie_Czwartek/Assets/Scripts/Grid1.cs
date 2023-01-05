@@ -96,7 +96,7 @@ public class Grid1 : MonoBehaviour
             //looping
             switch (Mathf.FloorToInt((movement.x + lastKnownLocation.x))<0, gridX-1 < Mathf.FloorToInt((movement.x + lastKnownLocation.x)), gridY-1 < Mathf.FloorToInt((movement.y + lastKnownLocation.y)),0 > Mathf.FloorToInt((movement.y + lastKnownLocation.y)))
             {
-                //kwadrat wychodzi gór¹
+                //kwadrat wychodzi do³em
                 case (true,false,false,false):
                     blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
                     blocksArray[gridX-1, LastKnowLocation("y") + Mathf.FloorToInt(movement.y)].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
