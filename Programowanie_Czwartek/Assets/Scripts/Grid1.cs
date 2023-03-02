@@ -96,13 +96,13 @@ public class Grid1 : MonoBehaviour
             //looping
             switch (Mathf.FloorToInt((movement.x + lastKnownLocation.x))<0, gridX-1 < Mathf.FloorToInt((movement.x + lastKnownLocation.x)), gridY-1 < Mathf.FloorToInt((movement.y + lastKnownLocation.y)),0 > Mathf.FloorToInt((movement.y + lastKnownLocation.y)))
             {
-                //kwadrat wychodzi do³em
+                //kwadrat wychodzi gór¹
                 case (true,false,false,false):
                     blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
                     blocksArray[gridX-1, LastKnowLocation("y") + Mathf.FloorToInt(movement.y)].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
                     lastKnownLocation = new Vector2(gridX-1, lastKnownLocation.y);
                     break;
-                //kwadrat wychodzi gór¹
+                //kwadrat wychodzi do³em
                 case (false,true,false,false):
                     blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
                     blocksArray[0, LastKnowLocation("y") + Mathf.FloorToInt(movement.y)].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
@@ -120,12 +120,25 @@ public class Grid1 : MonoBehaviour
                     blocksArray[LastKnowLocation("x") + Mathf.FloorToInt(movement.x), gridY - 1].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
                     lastKnownLocation = new Vector2(lastKnownLocation.x, gridY - 1);
                     break;
+                //wychodzi na skos gór¹
+                case (true, false, false, true):
+                    blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
+                    blocksArray[gridX - 1, gridY - 1].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
+                    lastKnownLocation = new Vector2(gridX - 1, gridY - 1);
+                    break;
+                //wychodzi na skos do³êm
+                case (false, true, true, false):
+                    blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
+                    blocksArray[0,0].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
+                    lastKnownLocation = new Vector2(0,0);
+                    break;
                 //wszystko ok
                 default:
                     blocksArray[LastKnowLocation("x"), LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
                     blocksArray[LastKnowLocation("x") + Mathf.FloorToInt(movement.x), LastKnowLocation("y") + Mathf.FloorToInt(movement.y)].GetComponent<SpriteRenderer>().material.color = new Color(0, 0, 255);
                     lastKnownLocation += movement;
                     break;
+                    //wiem ¿e przy chodzeniu na skos zostawia po sobie œlad, da siê to naprawiæ ale nie jest to super wa¿ne, przynajmniej uda³o siê poprawiæ wywalanie arraya przy skosie
 
             }
                 //blocksArray[LastKnowLocation("x"),LastKnowLocation("y")].GetComponent<SpriteRenderer>().material.color = new Color(255, 255, 255);
