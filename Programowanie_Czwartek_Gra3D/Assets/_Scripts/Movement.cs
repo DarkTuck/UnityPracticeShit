@@ -10,6 +10,10 @@ public class Movement : MonoBehaviour
     
     private InputAction turning;
     #region inputInit
+    private void Awake()
+    {
+        input = new Inputs();
+    }
     private void OnEnable()
     {
         turning = input.Player.Move;
