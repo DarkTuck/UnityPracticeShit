@@ -5,7 +5,7 @@ Zrobić grę w której:
 -	Kamera podąża za graczem
 -	Jak dojedzie do końca, przechodzi do następnego poziomu(Ułożyć 2 poziomy)
 - Na trasie są punkty do zbierania. Punkty wyświetlają się na UI
-	* są dla chętnych
+	* te innaczej oznaczone są dla chętnych
 	* Zrobić ruchome przeszkody
 	* Zrobić strefy przyspieszające albo spowalniające gracza
 	* Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody)
