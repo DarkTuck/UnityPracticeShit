@@ -5,11 +5,11 @@ Zrobić grę w której:
 -	Kamera podąża za graczem ✓
 -	Jak dojedzie do końca, przechodzi do następnego  poziomu(Ułożyć 2 poziomy) prawie ✓
 -	Na trasie są punkty do zbierania. Punkty wyświetlają się na UI✓
-*   te innaczej oznaczone są dla chętnych
-*   Zrobić ruchome przeszkody ✓
-*	Zrobić strefy przyspieszające albo spowalniające gracza ✓
-*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) prawie✓
-*   Zrobić skakanie i kucanie ✓
-*	Zrobić generowanie poziomu w nieskończoność ✓
-*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej
+	*   te innaczej oznaczone są dla chętnych
+	*   Zrobić ruchome przeszkody ✓
+	*	Zrobić strefy przyspieszające albo spowalniające gracza ✓
+	*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) prawie✓
+	*   Zrobić skakanie i kucanie ✓
+	*	Zrobić generowanie poziomu w nieskończoność ✓
+	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Co?)
 
