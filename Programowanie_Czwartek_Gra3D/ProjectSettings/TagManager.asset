@@ -8,6 +8,8 @@ TagManager:
   - SpeedDown
   - Enemy
   - Colectable
+  - Point
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

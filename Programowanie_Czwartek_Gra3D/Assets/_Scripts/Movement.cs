@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
 {
     #region Variables
     private Inputs input;
-    [SerializeField] float speed=1,jumpForce=5,groundCheckDistance=0.5f;
+    public float speed = 1;
+    [SerializeField]float jumpForce=5,groundCheckDistance=0.5f;
     private float currentJumpForce;
     private Vector3 velocity;
     private Rigidbody rb;
