@@ -7,16 +7,22 @@ using NaughtyAttributes;
 public class ColisonDetect : MonoBehaviour
 {
     [SerializeField] float BoostValue=2f;
-    [SerializeField] [Required] GameObject ui;
+    [SerializeField] [Required] GameObject ui,shield;
     [SerializeField] string nextScene;
     Movement movement;
     string CurrentScene;
+    bool shiedlActive;
     private void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
         {
             case "Enemy":
-                SceneManager.LoadScene(CurrentScene);
+                if (!shiedlActive)
+                {
+                    SceneManager.LoadScene(CurrentScene);
+                }
+                shiedlActive = false;
+                shield.SetActive(false);
                 break;
             case "SpeedUp":
                 movement.speed += BoostValue;
@@ -27,8 +33,9 @@ public class ColisonDetect : MonoBehaviour
                 Destroy(collision.gameObject);
                 break;
             case "Colectable":
-                Debug.Log("MARCO");
                 Destroy(collision.gameObject);
+                shiedlActive = true;
+                shield.SetActive(true);
                 break;
             case "Point":
                 ui.GetComponent<PointCount>().score += 5;

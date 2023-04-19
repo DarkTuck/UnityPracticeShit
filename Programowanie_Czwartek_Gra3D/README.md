@@ -8,7 +8,7 @@ Zrobić grę w której:
 	*   te innaczej oznaczone są dla chętnych
 	*   Zrobić ruchome przeszkody ✓
 	*	Zrobić strefy przyspieszające albo spowalniające gracza ✓
-	*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) prawie✓
+	*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) ✓
 	*   Zrobić skakanie i kucanie ✓
 	*	Zrobić generowanie poziomu w nieskończoność ✓
 	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Co?)
