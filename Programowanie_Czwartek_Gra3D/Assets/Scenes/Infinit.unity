@@ -164,8 +164,8 @@ MonoBehaviour:
   numberOfGroundTiles: 10
   tileSize: 1
   obstacleSpawnProbability: 0.5
-  minObstacleX: -10
-  maxObstacleX: 10
+  minObstacleX: -5
+  maxObstacleX: 5
 --- !u!4 &602875273
 Transform:
   m_ObjectHideFlags: 0

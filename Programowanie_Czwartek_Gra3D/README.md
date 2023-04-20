@@ -11,5 +11,5 @@ Zrobić grę w której:
 	*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) ✓
 	*   Zrobić skakanie i kucanie ✓
 	*	Zrobić generowanie poziomu w nieskończoność ✓
-	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Co?)
+	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Splines)
 
