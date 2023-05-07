@@ -11,5 +11,5 @@ Zrobić grę w której:
 	*   Zrobić przedmioty które można podnieść i użyć (np. pistolet, którym możemy niszczyć przeszkody) ✓
 	*   Zrobić skakanie i kucanie ✓
 	*	Zrobić generowanie poziomu w nieskończoność ✓
-	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Splines)
+	*   Zrobić że gracz nie jedzie do przodu, tylko po krzywej (Splines) ✓? (można powiedzieć że działa ale faktyczne spline to nie są. Na poziomie nieskończonym wystarczą skręcające prefaby, aby były spline musi być odzielny skończony poziom[coming soon])
 
